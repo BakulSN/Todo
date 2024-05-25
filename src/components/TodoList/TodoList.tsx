@@ -29,19 +29,17 @@ export const TodoList: React.FC<TodoListProps> = ({
     };
 
     return (
-        <div>
-            <STodoList>
-                <h3>{getTitle()}</h3>
-                {todos.map(todo => (
-                    <TodoItem
-                        key={todo.id}
-                        todo={todo}
-                        onDelete={deleteTodo}
-                        onToggle={toggleTodoComplete}
-                        onSave={updateTodoTitle}
-                    />
-                ))}
-            </STodoList>
-        </div>
+        <STodoList>
+            <h3>{getTitle()}</h3>
+            {todos.map(todo => (
+                <TodoItem
+                    key={todo.id}
+                    todo={todo}
+                    onDelete={deleteTodo}
+                    onToggle={toggleTodoComplete}
+                    onSave={updateTodoTitle}
+                />
+            ))}
+        </STodoList>
     );
 };

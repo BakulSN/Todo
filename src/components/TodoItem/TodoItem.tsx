@@ -43,7 +43,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({ todo, onDelete, onToggle, on
     };
 
     return (
-        <div>
+        <>
             {isEditing ? (
                 <STodoItem>
                     <input type='text' value={editTitle} onChange={handleChange} placeholder='Enter text' />
@@ -66,6 +66,6 @@ export const TodoItem: React.FC<TodoItemProps> = ({ todo, onDelete, onToggle, on
                     </div>
                 </STodoItem>
             )}
-        </div>
+        </>
     );
 };
